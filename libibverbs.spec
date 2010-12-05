@@ -5,7 +5,7 @@
 Summary:	A library for direct userspace use of RDMA (InfiniBand/iWARP) hardware
 Name:		libibverbs
 Version:	1.1.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/Libraries
 License:	GPLv2 or BSD
 URL:		http://openfabrics.org/
