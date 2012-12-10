@@ -100,3 +100,25 @@ rm -rf %{buildroot}
 %{_bindir}/*
 %{_mandir}/man1/*
 
+
+
+%changelog
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 1.1.3-2mdv2011.0
++ Revision: 609753
+- rebuild
+
+* Tue Apr 06 2010 Sandro Cazzaniga <kharec@mandriva.org> 1.1.3-1mdv2010.1
++ Revision: 532288
+- update to 1.1.3
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.1.2-2mdv2010.0
++ Revision: 429752
+- rebuild
+
+* Fri Sep 12 2008 Oden Eriksson <oeriksson@mandriva.com> 1.1.2-1mdv2009.0
++ Revision: 284122
+- import libibverbs
+
+
+* Fri Sep 12 2008 Oden Eriksson <oeriksson@mandriva.com> 1.1.2-1mdv2009.0
+- initial Mandriva package
