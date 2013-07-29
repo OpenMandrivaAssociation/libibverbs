@@ -5,14 +5,13 @@
 Summary:	A library for direct userspace use of RDMA (InfiniBand/iWARP) hardware
 Name:		libibverbs
 Version:	1.1.6
-Release:	1
+Release:	2
 Group:		System/Libraries
 License:	GPLv2 or BSD
 URL:		http://openfabrics.org/
 Source0:	http://openfabrics.org/downloads/verbs/libibverbs-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	libtool
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 libibverbs is a library that allows userspace processes to use RDMA "verbs" as
@@ -69,56 +68,18 @@ information about RDMA devices.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
-%clean
-rm -rf %{buildroot}
-
 %files -n %{libname}
-%defattr(-,root,root,-)
 %doc AUTHORS COPYING ChangeLog README
 %{_libdir}/libibverbs*.so.%{major}*
 
 %files -n %{develname}
-%defattr(-,root,root,-)
 %{_libdir}/lib*.so
 %{_libdir}/lib*.*a
 %{_includedir}/*
 %{_mandir}/man3/*
 
 %files utils
-%defattr(-,root,root,-)
 %{_bindir}/*
 %{_mandir}/man1/*
-
-
-
-%changelog
-* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 1.1.3-2mdv2011.0
-+ Revision: 609753
-- rebuild
-
-* Tue Apr 06 2010 Sandro Cazzaniga <kharec@mandriva.org> 1.1.3-1mdv2010.1
-+ Revision: 532288
-- update to 1.1.3
-
-* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.1.2-2mdv2010.0
-+ Revision: 429752
-- rebuild
-
-* Fri Sep 12 2008 Oden Eriksson <oeriksson@mandriva.com> 1.1.2-1mdv2009.0
-+ Revision: 284122
-- import libibverbs
-
-
-* Fri Sep 12 2008 Oden Eriksson <oeriksson@mandriva.com> 1.1.2-1mdv2009.0
-- initial Mandriva package
