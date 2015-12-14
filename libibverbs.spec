@@ -2,6 +2,8 @@
 %define libname	%mklibname ibverbs %{major}
 %define develname %mklibname -d ibverbs
 
+%define _disable_lto 1
+
 Summary:	A library for direct userspace use of RDMA (InfiniBand/iWARP) hardware
 Name:		libibverbs
 Version:	1.1.8
@@ -64,6 +66,7 @@ information about RDMA devices.
 %setup -q
 
 %build
+export CC=gcc
 %configure
 %make
 
