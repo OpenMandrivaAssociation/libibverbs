@@ -1,5 +1,2 @@
-removed_sources:
-  libibverbs-1.1.6.tar.gz: 3b407ca32c3bd07782c281d82f045ea8c6672080
-  libibverbs-1.1.7.tar.gz: 3def9411b1e443cd3c8dfde761c7c6308cb98e6f
 sources:
-  libibverbs-1.1.8.tar.gz: df1afc6f368f4ad4c7a74d270591fc79db875b2b
+  libibverbs-1.2.0.tar.gz: 51f2196b2764216e19c5ab7d3311a83828a2fea3
