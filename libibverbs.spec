@@ -14,6 +14,7 @@ URL:		http://openfabrics.org/
 Source0:	http://openfabrics.org/downloads/verbs/libibverbs-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	libtool
+BuildRequires:  pkgconfig(libnl-1)
 
 %description
 libibverbs is a library that allows userspace processes to use RDMA "verbs" as
